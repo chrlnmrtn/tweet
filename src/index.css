@@ -1,13 +1,77 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+    --large-space: 1.5rem;
+    --medium-space: 0.6rem;
+    --small-space: 00.3rem;
+
+    --large-font: 1.4em;
+    --small-font: 0.8em;
+
+
+    --dot:"\00b7";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tweet {
+   display: flex;
+   width: 35rem;
+   min-height: 4rem;
+   border: 1px solid #ccc;
+   padding: 0.6rem;
+   font-size: 0.9rem;
+   line-height: 1.1rem;
+    }
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    margin-right: 10px;
+    }
+
+.content{
+    display: flex;
+    gap: 0.3rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-right: 0.3rem;
+}
+
+.handle{
+    color:#8899a6;
+    font-size: 0.8rem;
+}
+
+.time{
+    padding-left: 0.3rem;
+    color: #8899a6;
+}
+
+.time::before{
+    content: var(--dot);
+    padding-right: 0.3rem;
+}
+
+.buttons {
+    display: flex;
+    gap: var(--large-space);
+    margin-top: 10px;
+    margin-left: 2px;
+    font-size: 1.4em;
+    color: #aab8c2;
+}
+
+.like-count,
+.retweet-count{
+    position: relative;
+    bottom: var(--tiny-space);
+    font-size:var(--small-font) ;
+    margin-left: calc(var(--small-space) + var(--tiny-space));
+    font-weight: bold;
 }
